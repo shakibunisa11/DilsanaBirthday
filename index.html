@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Dilsana ✨</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: radial-gradient(circle at top, #38245f, #100a25 75%);
+}
+
+#sky, #codeRain {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#sky { z-index: 0; }
+#codeRain { z-index: 0; opacity: 0.15; }
+
+.page {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 92%;
+    margin: auto;
+    padding: 25px 0 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #d9caff;
+    letter-spacing: 1px;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.moon {
+    font-size: 65px;
+    animation: float 3s ease-in-out infinite;
+    margin: 30px 0;
+    filter: drop-shadow(0 0 20px #d5a5ff);
+}
+
+.eyebrow {
+    color: #ffe5a3;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 8vw, 70px);
+    line-height: 1.2;
+}
+
+.name {
+    display: block;
+    background: linear-gradient(90deg, #ffe7a3, #ff9bdc, #b8a0ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: glow 3s linear infinite alternate;
+}
+
+.subtitle {
+    max-width: 500px;
+    line-height: 1.9;
+    color: #d9d0eb;
+}
+
+#typed {
+    min-height: 25px;
+    color: #ffe7a3;
+    margin: 18px 0;
+}
+
+button {
+    padding: 13px 22px;
+    margin: 7px;
+    border-radius: 30px;
+    border: 1px solid #c6a3ff;
+    color: white;
+    background: #ffffff12;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 22px #bc91ff88;
+}
+
+.primary {
+    color: #210d3b;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(100deg, #ffe5a3, #ff9bdc);
+}
+
+.section {
+    margin: 24px 0;
+    padding: 28px 22px;
+    border: 1px solid #d5b8ff35;
+    border-radius: 22px;
+    background: #ffffff09;
+    box-shadow: 0 10px 35px #00000018;
+}
+
+.section h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.section p {
+    color: #ded5ee;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.card {
+    padding: 18px 10px;
+    background: #ffffff08;
+    border: 1px solid #ffffff15;
+    border-radius: 16px;
+}
+
+.card div { font-size: 30px; }
+.card h3 { font-size: 14px; }
+
+.terminal {
+    text-align: left;
+    border: 1px solid #8b78b5;
+    border-radius: 12px;
+    background: #070a17;
+    overflow: hidden;
+}
+
+.terminal-title {
+    padding: 12px;
+    border-bottom: 1px solid #ffffff20;
+    color: #c9b9e9;
+}
+
+pre {
+    padding: 15px;
+    color: #a9f4ce;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.purple { color: #c4a0ff; }
+.gold { color: #ffe7a3; }
+
+#surprise {
+    display: none;
+    animation: appear 1s ease;
+}
+
+#surprise.show { display: block; }
+
+.heart {
+    font-size: 55px;
+    animation: heartbeat 1.2s infinite;
+}
+
+footer {
+    padding: 25px 0;
+    font-size: 11px;
+    color: #b8a9d3;
+}
+
+@keyframes float {
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes glow {
+    to { filter: drop-shadow(0 0 15px #ff9bdc); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.15); }
+}
+
+@media (max-width: 550px) {
+    .cards { grid-template-columns: 1fr; }
+    .topbar { font-size: 9px; }
+    .section { padding: 22px 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="sky"></canvas>
+<canvas id="codeRain"></canvas>
+
+<main class="page">
+
+<header class="topbar">
+    <span>✦ A LITTLE DIGITAL MAGIC</span>
+    <span>BIRTHDAY MODE: ON</span>
+</header>
+
+<section class="hero">
+
+    <div class="moon">🌙</div>
+
+    <div class="eyebrow">A special day for someone special</div>
+
+    <h1>
+        Happy Birthday,
+        <span class="name">Dilsana Islam!</span>
+    </h1>
+
+    <p class="subtitle">
+        Today, the stars shine a little brighter,
+        and the universe celebrates someone wonderful.
+        May your day be filled with magic and happiness.
+    </p>
+
+    <div id="typed"></div>
+
+    <button class="primary" onclick="openSurprise()">
+        Unlock Your Magic ✨
+    </button>
+
+    <button onclick="makeWish()">
+        Make a Wish ⭐
+    </button>
+
+</section>
+
+<section class="section">
+    <h2>A Little Wish for You 💌</h2>
+
+    <p>
+        Dear Dilsana, may your life be filled with happiness,
+        peaceful moments, beautiful memories, and endless
+        opportunities. May you always find reasons to smile
+        and the courage to follow your dreams.
+    </p>
+
+    <p>
+        May this new chapter bring you success, love,
+        laughter, and countless wonderful surprises.
+        Keep shining and always believe in yourself.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Your Universe of Possibilities ✨</h2>
+
+    <div class="cards">
+        <div class="card">
+            <div>🌷</div>
+            <h3>Happiness</h3>
+            <p>May every day bring you smiles.</p>
+        </div>
+
+        <div class="card">
+            <div>🌟</div>
+            <h3>Success</h3>
+            <p>May your beautiful dreams come true.</p>
+        </div>
+
+        <div class="card">
+            <div>💖</div>
+            <h3>Memories</h3>
+            <p>May your year be full of special moments.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>A Wish Written in Code 💻</h2>
+
+    <p>A CSE student can turn code into birthday magic!</p>
+
+    <div class="terminal">
+        <div class="terminal-title">● ● ● &nbsp; birthday.js</div>
+
+        <pre><span class="purple">const</span> birthdayGirl =
+    <span class="gold">"Dilsana Islam"</span>;
+
+<span class="purple">function</span> sendWishes() {
+    <span class="purple">return</span> {
+        happiness: <span class="gold">"infinite"</span>,
+        success: <span class="gold">"infinite"</span>,
+        smiles: <span class="gold">"every day"</span>,
+        dreams: <span class="gold">"coming true"</span>
+    };
+}
+
+console.log(
+    "Happy Birthday, " + birthdayGirl
+);</pre>
+    </div>
+</section>
+
+<section class="section" id="surprise">
+    <div class="heart">💖</div>
+
+    <h2>Your Magical Surprise!</h2>
+
+    <p id="message">
+        Happy Birthday, Dilsana!
+    </p>
+
+    <p>
+        Keep dreaming. Keep growing. Keep shining. ✨
+    </p>
+
+    <button onclick="launchConfetti()">More Magic! 🎉</button>
+</section>
+
+<footer>
+    Made with ♥, imagination, and code.
+    <br>
+    A little birthday project from a CSE student. 💻
+</footer>
+
+</main>
+
+<script>
+
+// MAGICAL STARS
+
+const sky = document.getElementById("sky");
+const ctx = sky.getContext("2d");
+
+let stars = [];
+let w, h;
+
+function resizeSky() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    w = window.innerWidth;
+    h = window.innerHeight;
+
+    sky.width = w * dpr;
+    sky.height = h * dpr;
+    sky.style.width = w + "px";
+    sky.style.height = h + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    stars = Array.from(
+        { length: Math.min(150, Math.floor(w / 6)) },
+        () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 1.5 + 0.4,
+            a: Math.random() * 6,
+            speed: Math.random() * 0.025 + 0.004
+        })
+    );
+}
+
+function drawStars() {
+    ctx.clearRect(0, 0, w, h);
+
+    stars.forEach(s => {
+        s.a += s.speed;
+
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle =
+            `rgba(255,235,255,${0.3 + Math.abs(Math.sin(s.a)) * 0.7})`;
+        ctx.fill();
+    });
+
+    requestAnimationFrame(drawStars);
+}
+
+window.addEventListener("resize", resizeSky);
+resizeSky();
+drawStars();
+
+
+// DIGITAL CODE RAIN
+
+const rain = document.getElementById("codeRain");
+const rctx = rain.getContext("2d");
+
+const symbols = "01{}<>[]();";
+const fontSize = 15;
+
+let columns = [];
+let rw, rh;
+
+function resizeRain() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    rw = window.innerWidth;
+    rh = window.innerHeight;
+
+    rain.width = rw * dpr;
+    rain.height = rh * dpr;
+    rain.style.width = rw + "px";
+    rain.style.height = rh + "px";
+
+    rctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    columns = Array.from(
+        { length: Math.ceil(rw / fontSize) },
+        () => Math.random() * -40
+    );
+}
+
+function drawRain() {
+    rctx.clearRect(0, 0, rw, rh);
+    rctx.font = fontSize + "px monospace";
+    rctx.fillStyle = "#c4a2ff";
+
+    columns.forEach((y, i) => {
+        const char = symbols[
+            Math.floor(Math.random() * symbols.length)
+        ];
+
+        rctx.fillText(char, i * fontSize, y * fontSize);
+
+        if (y * fontSize > rh && Math.random() > 0.975) {
+            columns[i] = 0;
+        } else {
+            columns[i] += 0.35;
+        }
+    });
+
+    requestAnimationFrame(drawRain);
+}
+
+window.addEventListener("resize", resizeRain);
+resizeRain();
+drawRain();
+
+
+// TYPEWRITER ANIMATION
+
+const phrases = [
+    "Wishing you a universe of happiness... ✨",
+    "May your dreams come true... 🌙",
+    "Keep shining, Dilsana... 💖"
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeText() {
+    const target = document.getElementById("typed");
+    const phrase = phrases[phraseIndex];
+
+    target.textContent = phrase.substring(0, charIndex);
+
+    if (!deleting && charIndex < phrase.length) {
+        charIndex++;
+        setTimeout(typeText, 65);
+    } else if (!deleting) {
+        deleting = true;
+        setTimeout(typeText, 1500);
+    } else if (charIndex > 0) {
+        charIndex--;
+        setTimeout(typeText, 25);
+    } else {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeText, 300);
+    }
+}
+
+typeText();
+
+
+// SURPRISE BUTTON
+
+function openSurprise() {
+    document.getElementById("surprise").classList.add("show");
+
+    document.getElementById("message").textContent =
+        "Dear Dilsana, may your heart stay hopeful, " +
+        "your days be filled with laughter, and your future " +
+        "shine with countless opportunities. Happy Birthday! 💖";
+
+    document.getElementById("surprise").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    launchConfetti();
+}
+
+
+// MAKE A WISH
+
+function makeWish() {
+    launchConfetti();
+
+    const btn = document.querySelector(".hero button:last-child");
+    btn.textContent = "Wish sent to the universe! ✨";
+
+    setTimeout(() => {
+        btn.textContent = "Make a Wish ⭐";
+    }, 2500);
+}
+
+
+// CONFETTI ANIMATION
+
+function launchConfetti() {
+    const emojis = ["✨", "💖", "🎉", "🌟", "🎈", "🌸"];
+
+    for (let i = 0; i < 40; i++) {
+        const particle = document.createElement("div");
+
+        particle.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        Object.assign(particle.style, {
+            position: "fixed",
+            left: Math.random() * 100 + "vw",
+            top: "-35px",
+            zIndex: "10",
+            pointerEvents: "none",
+            fontSize: (16 + Math.random() * 18) + "px",
+            transition: "transform 3.5s linear, opacity 3.5s linear"
+        });
+
+        document.body.appendChild(particle);
+
+        requestAnimationFrame(() => {
+            particle.style.transform =
+                `translateY(${window.innerHeight + 80}px) rotate(360deg)`;
+            particle.style.opacity = "0";
+        });
+
+        setTimeout(() => particle.remove(), 3800);
+    }
+}
+
+</script>
+
+</body>
+</html>
